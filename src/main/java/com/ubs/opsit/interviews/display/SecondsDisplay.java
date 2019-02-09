@@ -11,7 +11,7 @@ public class SecondsDisplay implements Displayable {
     }
 
     @Override
-    public String showTime() {
+    public String displayTime() {
         return String.format("%c\n", (seconds % 2 == 0 ? YELLOW_LIGHT.getColor() : NO_LIGHT.getColor()));
     }
 }

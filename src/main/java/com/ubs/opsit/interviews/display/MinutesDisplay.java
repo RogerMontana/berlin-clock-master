@@ -22,7 +22,7 @@ public class MinutesDisplay extends BaseTwoRowDisplay {
         return row.toString();
     }
 
-    public String showTime(){
+    public String displayTime(){
         return String.format("%s\n%s", this.getFirst(), this.getSecond(YELLOW_LIGHT));
     }
 }

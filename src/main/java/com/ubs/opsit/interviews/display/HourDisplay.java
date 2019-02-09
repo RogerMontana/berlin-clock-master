@@ -19,7 +19,7 @@ public class HourDisplay extends BaseTwoRowDisplay {
     }
 
     @Override
-    public String showTime() {
+    public String displayTime() {
         return String.format("%s\n%s\n", this.getFirst(), super.getSecond(RED_LIGHT));
     }
 }

@@ -19,13 +19,13 @@ public class BerlinClock {
 
     public String show() {
         StringBuilder row = new StringBuilder();
-        row.append(new SecondsDisplay(seconds).showTime());
+        row.append(new SecondsDisplay(seconds).displayTime());
 
         BaseTwoRowDisplay hourDisplay = new HourDisplay(hours);
-        row.append(hourDisplay.showTime());
+        row.append(hourDisplay.displayTime());
 
         BaseTwoRowDisplay minutesDisplay = new MinutesDisplay(minutes);
-        row.append(minutesDisplay.showTime());
+        row.append(minutesDisplay.displayTime());
 
         return row.toString();
     }
