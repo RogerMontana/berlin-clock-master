@@ -1,7 +1,7 @@
 package com.ubs.opsit.interviews.display;
 
-import static com.ubs.opsit.interviews.lamp.ClockLamp.NO_LIGHT;
-import static com.ubs.opsit.interviews.lamp.ClockLamp.YELLOW_LIGHT;
+import static com.ubs.opsit.interviews.lamp.ClockLight.NO_LIGHT;
+import static com.ubs.opsit.interviews.lamp.ClockLight.YELLOW_LIGHT;
 
 public class SecondsDisplay implements Displayable {
     private int seconds;

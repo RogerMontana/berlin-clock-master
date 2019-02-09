@@ -1,13 +1,13 @@
 package com.ubs.opsit.interviews.display;
 
-import static com.ubs.opsit.interviews.lamp.ClockLamp.NO_LIGHT;
-import static com.ubs.opsit.interviews.lamp.ClockLamp.RED_LIGHT;
-import static com.ubs.opsit.interviews.lamp.ClockLamp.YELLOW_LIGHT;
+import static com.ubs.opsit.interviews.lamp.ClockLight.NO_LIGHT;
+import static com.ubs.opsit.interviews.lamp.ClockLight.RED_LIGHT;
+import static com.ubs.opsit.interviews.lamp.ClockLight.YELLOW_LIGHT;
 
 public class MinutesDisplay extends BaseTwoRowDisplay {
 
     public MinutesDisplay(int currentTimeUnit) {
-        super(YELLOW_LIGHT, currentTimeUnit);
+        super(currentTimeUnit);
     }
 
     @Override
@@ -23,6 +23,6 @@ public class MinutesDisplay extends BaseTwoRowDisplay {
     }
 
     public String showTime(){
-        return String.format("%s\n%s", this.getFirst(), this.getSecond());
+        return String.format("%s\n%s", this.getFirst(), this.getSecond(YELLOW_LIGHT));
     }
 }

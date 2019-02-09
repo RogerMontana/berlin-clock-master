@@ -1,13 +1,13 @@
 package com.ubs.opsit.interviews.lamp;
 
-public enum ClockLamp {
+public enum ClockLight {
     NO_LIGHT ('O'),
     RED_LIGHT ('R'),
     YELLOW_LIGHT ('Y');
 
     private final char name;
 
-    private ClockLamp(char s) {
+    private ClockLight(char s) {
         name = s;
     }
 

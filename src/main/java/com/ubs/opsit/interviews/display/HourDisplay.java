@@ -1,12 +1,12 @@
 package com.ubs.opsit.interviews.display;
 
-import static com.ubs.opsit.interviews.lamp.ClockLamp.NO_LIGHT;
-import static com.ubs.opsit.interviews.lamp.ClockLamp.RED_LIGHT;
+import static com.ubs.opsit.interviews.lamp.ClockLight.NO_LIGHT;
+import static com.ubs.opsit.interviews.lamp.ClockLight.RED_LIGHT;
 
 public class HourDisplay extends BaseTwoRowDisplay {
 
     public HourDisplay(int currentHour) {
-        super(RED_LIGHT, currentHour);
+        super(currentHour);
     }
 
     @Override
@@ -20,6 +20,6 @@ public class HourDisplay extends BaseTwoRowDisplay {
 
     @Override
     public String showTime() {
-        return String.format("%s\n%s\n", this.getFirst(), this.getSecond());
+        return String.format("%s\n%s\n", this.getFirst(), super.getSecond(RED_LIGHT));
     }
 }
