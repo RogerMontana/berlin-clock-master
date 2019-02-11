@@ -1,9 +1,7 @@
 package com.ubs.opsit.interviews.clock;
 
-import com.ubs.opsit.interviews.display.BaseTwoRowDisplay;
-import com.ubs.opsit.interviews.display.HourDisplay;
-import com.ubs.opsit.interviews.display.MinutesDisplay;
-import com.ubs.opsit.interviews.display.SecondsDisplay;
+import com.ubs.opsit.interviews.display.DisplayFactory;
+import com.ubs.opsit.interviews.display.DisplayType;
 
 public class BerlinClock {
 
@@ -18,15 +16,11 @@ public class BerlinClock {
     }
 
     public String show() {
+        DisplayFactory displayFactory = new DisplayFactory();
         StringBuilder row = new StringBuilder();
-        row.append(new SecondsDisplay(seconds).displayTime());
-
-        BaseTwoRowDisplay hourDisplay = new HourDisplay(hours);
-        row.append(hourDisplay.displayTime());
-
-        BaseTwoRowDisplay minutesDisplay = new MinutesDisplay(minutes);
-        row.append(minutesDisplay.displayTime());
-
+        row.append(displayFactory.getDisplay(DisplayType.SECONDS, seconds).displayTime());
+        row.append(displayFactory.getDisplay(DisplayType.HOURS, hours).displayTime());
+        row.append(displayFactory.getDisplay(DisplayType.MINUTES, minutes).displayTime());
         return row.toString();
     }
 }
